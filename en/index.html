@@ -152,23 +152,23 @@
   .cta-band h2{max-width:16ch; font-size:clamp(1.8rem,3.4vw,2.6rem);}
   .cta-band .btns{display:flex; gap:12px; flex-wrap:wrap;}
 
-  footer{margin-top:72px; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.85rem;}
-  .footer-top{display:flex; justify-content:space-between; gap:48px; flex-wrap:wrap; padding-block:48px 32px;}
-  .footer-brand{display:flex; flex-direction:column; gap:14px; max-width:280px;}
-  .footer-brand img{height:34px; width:auto; display:block;}
-  .footer-tagline{margin:0; line-height:1.6;}
+  footer{background:#F2EFE8; border-top:3px solid var(--rust); color:var(--ink-dim); font-size:.85rem;}
+  .footer-inner{max-width:var(--max); margin-inline:auto; padding-block:36px 0;}
+  .footer-top{display:flex; justify-content:space-between; align-items:flex-start; gap:48px; flex-wrap:wrap; padding-bottom:36px;}
+  .footer-logo{display:inline-block; line-height:0;}
+  .footer-logo img{height:30px; width:auto; display:block;}
   .footer-cols{display:flex; gap:56px; flex-wrap:wrap;}
   .footer-cols .col{display:flex; flex-direction:column; gap:10px;}
-  .footer-heading{display:block; font-family:'Archivo', sans-serif; font-weight:800; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); margin-bottom:4px;}
-  footer a{text-decoration:none; color:var(--ink-dim);}
+  .footer-heading{display:block; font-family:'Archivo', sans-serif; font-weight:800; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); margin-bottom:2px;}
+  footer a{text-decoration:none; color:var(--ink-dim); transition:color .15s;}
   footer a:hover{color:var(--rust);}
   .footer-bottom{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; padding-block:20px; border-top:1px solid var(--line); font-size:.76rem;}
   .footer-bottom .lang-switch{margin-right:0;}
   @media (max-width:700px){
-    .footer-top{flex-direction:column; gap:32px; padding-block:40px 24px;}
+    .footer-top{flex-direction:column; gap:28px; padding-bottom:28px;}
     .footer-cols{gap:32px; width:100%;}
     .footer-cols .col{flex:1 1 45%; min-width:130px;}
-    .footer-bottom{flex-direction:column; align-items:flex-start; gap:10px;}
+    .footer-bottom{flex-direction:column; align-items:flex-start; gap:10px; padding-bottom:78px;}
   }
 
   .note{max-width:var(--max); margin:16px auto 0; text-align:center; font-size:.74rem; color:var(--ink-dim); opacity:.7;}
@@ -421,13 +421,15 @@
     </div>
   </section>
 
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="/assets/logo-footer.png" alt="3DMA Studio — architecture, publicité, design" width="117" height="34" loading="lazy">
-        <p class="footer-tagline">3D rendering studio based in Casablanca — architecture, advertising, design.</p>
-      </div>
-      <div class="footer-cols">
+</div>
+
+<footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a class="footer-logo" href="index.html">
+          <img src="/assets/logo-footer.png" alt="3DMA Studio — architecture, publicité, design" width="112" height="30" loading="lazy">
+        </a>
+        <div class="footer-cols">
         <div class="col">
           <span class="footer-heading">Contact</span>
           <a href="tel:+212649526006">+212 6 49 52 60 06</a>
@@ -445,18 +447,18 @@
           <span>13 rue Bachir Laalej, Résidence Denalo 2</span>
       <span>Casablanca, Morocco</span>
         </div>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 3DMA Studio. All rights reserved.</span>
+      <div class="footer-bottom">
+        <span>© 2026 3DMA Studio. All rights reserved.</span>
           <div class="lang-switch">
         <a href="../index.html">FR</a>
         <a class="active" href="index.html">EN</a>
         <a href="../ar/index.html">AR</a>
       </div>
+      </div>
     </div>
   </footer>
-</div>
 
 
 <script>
