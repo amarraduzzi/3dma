@@ -37,6 +37,10 @@
   .navlinks a{text-decoration:none; color:var(--ink-dim);}
   .navlinks a.on, .navlinks a:hover{color:var(--ink);}
   @media (max-width:800px){ .navlinks{display:none;} }
+  .lang-switch{display:flex; gap:8px; font-size:.72rem; font-weight:700; letter-spacing:.04em; margin-right:22px;}
+  .lang-switch a{text-decoration:none; color:var(--ink-dim); padding-bottom:2px;}
+  .lang-switch a.active{color:var(--ink); border-bottom:1.5px solid var(--rust);}
+  .nav-right{display:flex; align-items:center;}
 
   .page-head{padding-block:38px 50px; border-bottom:1px solid var(--line);}
   .page-head .mono-label{margin-bottom:16px; display:block;}
@@ -75,6 +79,14 @@
   footer a{text-decoration:none; color:var(--ink-dim);}
   footer a:hover{color:var(--rust);}
   .note{max-width:var(--max); margin:16px auto 0; text-align:center; font-size:.74rem; color:var(--ink-dim); opacity:.7;}
+
+  .full-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:2px; background:var(--line); margin-bottom:2px;}
+  .port-card{position:relative; background:var(--paper); overflow:hidden;}
+  .port-card img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; filter:grayscale(.12) contrast(1.06);}
+  .port-label{position:absolute; left:14px; bottom:12px; color:#fff; z-index:2;}
+  .port-label .t{font-family:'Archivo', sans-serif; font-weight:800; font-size:.92rem; text-transform:uppercase;}
+  .port-label .s{font-size:.7rem; opacity:.82; margin-top:2px;}
+  .port-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.72) 100%);}
 </style>
 </head>
 <body>
@@ -87,7 +99,14 @@
       <a class="on" href="realisations.html">Réalisations</a>
       <a href="contact.html">Contact</a>
     </div>
-    <a class="btn btn-fill" href="contact.html">Devis →</a>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <a class="active" href="realisations.html">FR</a>
+        <a href="en/realisations.html">EN</a>
+        <a href="ar/realisations.html">AR</a>
+      </div>
+      <a class="btn btn-fill" href="contact.html">Devis →</a>
+    </div>
   </nav>
 
   <div class="page-head">
@@ -104,24 +123,6 @@
   </div>
 
   <div class="case">
-    <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg" alt="Rendu 3D extérieur, projet résidentiel Zenata, par 3DMA">
-    <div>
-      <span class="tag">Rendu extérieur — Casablanca</span>
-      <h2 class="disp">Résidence Zenata</h2>
-      <p>Rendu photoréaliste de façade pour un programme résidentiel, produit pour les supports de vente et le permis de construire.</p>
-    </div>
-  </div>
-
-  <div class="case">
-    <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-1024x768.jpg" alt="Rendu 3D hall vitrine, showroom immobilier, par 3DMA">
-    <div>
-      <span class="tag">Rendu intérieur</span>
-      <h2 class="disp">Hall showroom</h2>
-      <p>Rendu d'un hall d'accueil et espace vitrine, pensé comme premier contact visuel avec un programme immobilier.</p>
-    </div>
-  </div>
-
-  <div class="case">
     <img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="Aperçu visite 360 immersive appartement, par 3DMA">
     <div>
       <span class="tag">Visite 360 immersive</span>
@@ -130,23 +131,179 @@
     </div>
   </div>
 
-  <div class="index-block">
+  <div class="index-block" style="border-top:none; padding-top:0;">
     <div class="sec-head">
-      <h2 class="disp">Autres projets du studio</h2>
-      <p class="lead">Le reste du portfolio 3DMA, en attente d'intégration en haute résolution depuis la médiathèque du studio.</p>
-    </div>
-    <div class="proj-index">
-      <div class="proj-row"><span class="name">Villa Rim</span><span class="type">Rendu extérieur</span></div>
-      <div class="proj-row"><span class="name">Noria</span><span class="type">Rendu extérieur</span></div>
-      <div class="proj-row"><span class="name">Hammam</span><span class="type">Rendu intérieur</span></div>
-      <div class="proj-row"><span class="name">Al Jinane</span><span class="type">Rendu extérieur</span></div>
-      <div class="proj-row"><span class="name">Terrasse</span><span class="type">Rendu extérieur</span></div>
-      <div class="proj-row"><span class="name">Lot 6 terrains — ciel</span><span class="type">Vue d'ensemble</span></div>
-      <div class="proj-row"><span class="name">Chambre enfants</span><span class="type">Rendu intérieur</span></div>
-      <div class="proj-row"><span class="name">Lopal Square — piscine</span><span class="type">Rendu extérieur</span></div>
+      <h2 class="disp">Le portfolio complet</h2>
+      <p class="lead">41 rendus, plans et projets extraits directement de la médiathèque de 3dma.ma.</p>
     </div>
   </div>
-  <p class="note">Liste établie à partir du portfolio actuel de 3dma.ma. Chaque projet recevra sa propre fiche visuelle une fois la médiathèque migrée.</p>
+  <div class="full-grid">
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-scaled.jpg" alt="Rendu 3D — Résidence Zenata, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Résidence Zenata</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Hall vitrine, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Hall vitrine</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/villarim13000_copy_3072x1851-scaled.jpg" alt="Rendu 3D — Villa Rim, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Villa Rim</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/noria_02_copy_1920x2304.jpg" alt="Rendu 3D — Noria, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Noria</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hammam_copy_2634x2304-scaled.jpg" alt="Rendu 3D — Hammam, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Hammam</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/aljinane_M1-1_copy_3072x1745-scaled.jpg" alt="Rendu 3D — Al Jinane, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Al Jinane</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/terrasse_2_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Terrasse, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Terrasse</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/6_terrains_ciel_copy_3072x2015-scaled.jpg" alt="Rendu 3D — Lot 6 terrains — vue ciel, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Lot 6 terrains — vue ciel</div><div class="s">Plan de masse</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/ch_enfants_copy_3072x2161-scaled.jpg" alt="Rendu 3D — Chambre enfants, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Chambre enfants</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/lopalesquare_c9_piscineprive_copy_3072x2113-scaled.jpg" alt="Rendu 3D — Lopal Square — piscine privée, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Lopal Square — piscine privée</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/axo_02_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Vue axonométrique, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Vue axonométrique</div><div class="s">Plan de masse</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/v2_01_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Variante V2, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Variante V2</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/chambreinvites-1_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Chambre invités, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Chambre invités</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/25square_01.RGB_color.0000_copy_3072x2304-scaled.jpg" alt="Rendu 3D — 25 Square, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">25 Square</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/planrepartition_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Plan de répartition, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Plan de répartition</div><div class="s">Plan</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/VILLA23000_copy_3000x2304-scaled.jpg" alt="Rendu 3D — Villa 23000, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Villa 23000</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/cuisine-2_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Cuisine, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Cuisine</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/LOPALE_pmasse_1_copy_3072x2015-scaled.jpg" alt="Rendu 3D — Lopal — plan de masse, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Lopal — plan de masse</div><div class="s">Plan de masse</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/meridiench_blanc_copy_2893x2304-scaled.jpg" alt="Rendu 3D — Le Méridien — chambre, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Le Méridien — chambre</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/marine_HD_PRINT_copy_2743x2304-scaled.jpg" alt="Rendu 3D — Vue marine, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Vue marine</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/salonv1-1_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Salon, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Salon</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/lobby1_copy_3072x1920-scaled.jpg" alt="Rendu 3D — Lobby, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Lobby</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/SELA_MASTERhd_copy_3072x1843-scaled.jpg" alt="Rendu 3D — Sela — suite master, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Sela — suite master</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/villav6-gigapixel-art-width-5000px_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Villa V6, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Villa V6</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/05houdaexcelo.RGB_color.0000_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Houda Excelo, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Houda Excelo</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/boardroom_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Salle de conseil, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Salle de conseil</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/office-afique__cuisine_1-2048x1366_copy_3072x2049-scaled.jpg" alt="Rendu 3D — Cuisine — espace bureau, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Cuisine — espace bureau</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/20240819_121934_copy_3072x2015-scaled.jpg" alt="Rendu 3D — Repérage chantier, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Repérage chantier</div><div class="s">Suivi</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/sahel_2-architectural-width-10000px2_copy_3072x2048-scaled.jpg" alt="Rendu 3D — Sahel, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Sahel</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/3d-floorplan-detailled-2017-3d-model-max-fbx-1_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Plan 3D détaillé, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Plan 3D détaillé</div><div class="s">Plan</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/salle-a-manger_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Salle à manger, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Salle à manger</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/LOPALE_c5_copy_3072x2050-scaled.jpg" alt="Rendu 3D — Lopal — C5, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Lopal — C5</div><div class="s">Extérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/chambre_p_copy_3072x2304-scaled.jpg" alt="Rendu 3D — Chambre parentale, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Chambre parentale</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/meridien-ch_blanc-1-scaled.jpg" alt="Rendu 3D — Le Méridien — chambre blanche, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Le Méridien — chambre blanche</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/chambre_4-scaled.jpg" alt="Rendu 3D — Chambre, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Chambre</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/meridien-marocain-2-scaled-e1735151030130.jpg" alt="Rendu 3D — Le Méridien — salon marocain, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Le Méridien — salon marocain</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/salon_02.jpg" alt="Rendu 3D — Aménagement de salon, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Aménagement de salon</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/salle-de-reunion.jpg" alt="Rendu 3D — Salle de réunion, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Salle de réunion</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/salle-de-bain.jpg" alt="Rendu 3D — Salle de bain, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Salle de bain</div><div class="s">Intérieur</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/pmasse-ag-wm.jpg" alt="Rendu 3D — Les Jardins d'Agadir — plan de masse, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Les Jardins d'Agadir — plan de masse</div><div class="s">Plan de masse</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/Photo_1588273064182.jpg" alt="Rendu 3D — Piscine — Casabay, par 3DMA" loading="lazy">
+        <div class="port-label"><div class="t">Piscine — Casabay</div><div class="s">Extérieur</div></div>
+      </div>
+  </div>
+  <p class="note">Galerie reconstituée depuis la médiathèque WordPress de 3dma.ma. Quelques visuels historiques (2020) sont mêlés aux rendus récents (2024).</p>
 
   <div class="cta-band">
     <h2 class="disp">Votre projet, le prochain sur cette liste ?</h2>

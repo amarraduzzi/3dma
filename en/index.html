@@ -1,93 +1,62 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>3DMA Studio — Direction finale</title>
-<meta name="description" content="3DMA — studio de rendu 3D architectural, visites immersives 360° et maquettes orbitales à Casablanca. Plus de 10 ans au service des promoteurs immobiliers marocains.">
-<link rel="canonical" href="https://3dma.ma/">
+<title>3DMA Studio — 3D Architectural Rendering</title>
+<meta name="description" content="3DMA — 3D architectural rendering studio, 360° immersive tours and orbital models in Casablanca. Over 10 years serving Moroccan property developers.">
+<link rel="canonical" href="https://3dma.ma/en/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="3DMA Studio">
-<meta property="og:title" content="3DMA — Rendu 3D architectural & visites immersives, Casablanca">
-<meta property="og:description" content="Rendus 3D, visites immersives 360° et maquettes orbitales qui vendent un bien avant la première pierre. 10 ans d'expérience au Maroc.">
+<meta property="og:title" content="3DMA — 3D Architectural Rendering, Casablanca">
+<meta property="og:description" content="3D renders, 360° immersive tours and orbital models that sell a property before the first stone is laid. 10 years of experience in Morocco.">
 <meta property="og:image" content="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg">
-<meta property="og:locale" content="fr_FR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="3DMA — Rendu 3D architectural & visites immersives, Casablanca">
-<meta name="twitter:description" content="Rendus 3D, visites immersives 360° et maquettes orbitales qui vendent un bien avant la première pierre.">
-<meta name="twitter:image" content="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg">
+<meta property="og:locale" content="en_US">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "3DMA Studio",
   "image": "https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg",
-  "description": "Studio de rendu 3D architectural, visites immersives 360° et maquettes orbitales pour promoteurs immobiliers.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "13 rue Bachir Laalej, Résidence Denalo 2",
-    "addressLocality": "Casablanca",
-    "addressCountry": "MA"
-  },
+  "description": "3D architectural rendering studio, 360° immersive tours and orbital models for property developers.",
+  "address": {"@type": "PostalAddress", "streetAddress": "13 rue Bachir Laalej, Résidence Denalo 2", "addressLocality": "Casablanca", "addressCountry": "MA"},
   "telephone": "+212649526006",
-  "url": "https://3dma.ma/",
-  "areaServed": "MA",
-  "priceRange": "€€"
+  "url": "https://3dma.ma/en/",
+  "areaServed": "MA"
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500;1,9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#FAF9F6;
-    --ink:#101010;
-    --ink-dim:#726C61;
-    --rust:#B3421C;
-    --line:#E4E1D8;
-    --r:2px;
-    --max:1260px;
-  }
+  :root{ --paper:#FAF9F6; --ink:#101010; --ink-dim:#726C61; --rust:#B3421C; --line:#E4E1D8; --r:2px; --max:1260px; }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
-  body{
-    background:var(--paper); color:var(--ink);
-    font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    -webkit-font-smoothing:antialiased;
-    padding-inline:18px;
-  }
+  body{background:var(--paper); color:var(--ink); font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing:antialiased; padding-inline:18px;}
   img{max-width:100%; display:block;}
   a{color:inherit;}
   .wrap{max-width:var(--max); margin-inline:auto;}
   .disp{font-family:'Archivo', sans-serif; font-weight:900; letter-spacing:-.025em; text-wrap:balance; text-transform:uppercase;}
   .accent{font-family:'Fraunces', Georgia, serif; font-style:italic; font-weight:500; text-transform:none; color:var(--rust);}
   .mono-label{font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--ink-dim); font-weight:600;}
-
-  /* buttons — rectangular, precise */
-  .btn{
-    display:inline-flex; align-items:center; gap:10px; border-radius:var(--r);
-    padding:14px 24px; font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
-    text-decoration:none; white-space:nowrap;
-  }
+  .btn{display:inline-flex; align-items:center; gap:10px; border-radius:var(--r); padding:14px 24px; font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; white-space:nowrap;}
   .btn-fill{background:var(--ink); color:var(--paper);}
   .btn-fill:hover{background:var(--rust);}
   .btn-line{border:1px solid var(--ink); color:var(--ink);}
   .btn-line-light{border:1px solid rgba(250,249,246,.4); color:var(--paper);}
   .btn-rust{background:var(--rust); color:#fff;}
-
-  /* NAV */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{outline:2px solid var(--rust); outline-offset:2px;}
   nav{display:flex; align-items:center; justify-content:space-between; padding-block:26px;}
-  .logo{font-family:'Archivo', sans-serif; font-weight:900; font-size:1.1rem; letter-spacing:-.01em; text-transform:uppercase;}
+  .logo{font-family:'Archivo', sans-serif; font-weight:900; font-size:1.1rem; letter-spacing:-.01em; text-transform:uppercase; text-decoration:none; color:var(--ink);}
   .navlinks{display:flex; gap:34px; font-size:.8rem; font-weight:500;}
   .navlinks a{text-decoration:none; color:var(--ink-dim);}
-  .navlinks a:hover{color:var(--ink);}
+  .navlinks a.on, .navlinks a:hover{color:var(--ink);}
   @media (max-width:800px){ .navlinks{display:none;} }
   .lang-switch{display:flex; gap:8px; font-size:.72rem; font-weight:700; letter-spacing:.04em; margin-right:22px;}
   .lang-switch a{text-decoration:none; color:var(--ink-dim); padding-bottom:2px;}
   .lang-switch a.active{color:var(--ink); border-bottom:1.5px solid var(--rust);}
   .nav-right{display:flex; align-items:center;}
 
-  /* HERO */
   .hero{display:grid; grid-template-columns:.82fr 1.18fr; gap:36px; align-items:end; padding-block:22px 8px;}
   @media (max-width:920px){ .hero{grid-template-columns:1fr;} }
   .hero-copy h1{font-size:clamp(2.7rem,5.8vw,4.5rem); line-height:.95; margin:0 0 24px;}
@@ -95,18 +64,11 @@
   .hero-visual{position:relative;}
   .hero-visual .main-img{aspect-ratio:16/11; overflow:hidden; border-radius:var(--r);}
   .hero-visual .main-img img{width:100%; height:100%; object-fit:cover;}
-  .hero-visual .inset{
-    position:absolute; width:37%; aspect-ratio:4/3; overflow:hidden; border-radius:var(--r);
-    bottom:-40px; left:-30px; border:6px solid var(--paper); box-shadow:0 16px 34px rgba(16,16,16,.22);
-  }
+  .hero-visual .inset{position:absolute; width:37%; aspect-ratio:4/3; overflow:hidden; border-radius:var(--r); bottom:-40px; left:-30px; border:6px solid var(--paper); box-shadow:0 16px 34px rgba(16,16,16,.22);}
   .hero-visual .inset img{width:100%; height:100%; object-fit:cover;}
-  .hero-index{
-    position:absolute; top:16px; right:16px; background:rgba(16,16,16,.65); color:var(--paper);
-    font-family:'Archivo',sans-serif; font-size:.72rem; letter-spacing:.08em; padding:7px 12px; border-radius:var(--r);
-  }
+  .hero-index{position:absolute; top:16px; right:16px; background:rgba(16,16,16,.65); color:var(--paper); font-family:'Archivo',sans-serif; font-size:.72rem; letter-spacing:.08em; padding:7px 12px; border-radius:var(--r);}
   @media (max-width:920px){ .hero-visual .inset{display:none;} }
 
-  /* STAT STRIP */
   .stat-strip{display:flex; margin-top:92px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   @media (max-width:920px){ .stat-strip{margin-top:66px; flex-wrap:wrap;} }
   .stat{flex:1; padding:24px 22px; border-right:1px solid var(--line);}
@@ -115,34 +77,23 @@
   .stat .l{margin-top:5px;}
   @media (max-width:600px){ .stat{flex:1 1 50%; border-right:1px solid var(--line);} .stat:nth-child(2n){border-right:none;} }
 
-  /* SPLIT BANNER */
   .split-banner{position:relative; display:flex; isolation:isolate; border-radius:var(--r); overflow:hidden; min-height:320px; margin-block:100px;}
   @media (max-width:700px){ .split-banner{min-height:220px; margin-block:72px;} }
   .split-left{flex:1; background:var(--paper);}
   .split-right{flex:1; position:relative;}
   .split-right img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
-  .split-text{
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center;
-    color:#fff; mix-blend-mode:difference; margin:0; z-index:2; pointer-events:none;
-    font-size:clamp(2.4rem,6.6vw,5.2rem); line-height:.94;
-  }
+  .split-text{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; mix-blend-mode:difference; margin:0; z-index:2; pointer-events:none; font-size:clamp(2.4rem,6.6vw,5.2rem); line-height:.94;}
 
-  /* SECTION HEAD */
   .sec{padding-block:100px 0;}
   .sec-head{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:50px;}
   .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem); max-width:16ch;}
   .sec-head p{color:var(--ink-dim); max-width:32ch; font-size:.95rem; line-height:1.6; margin:0;}
 
-  /* QUOTE BAND */
   .quote-band{background:var(--ink); color:var(--paper); border-radius:var(--r); padding:68px 44px; text-align:center;}
-  .quote-band blockquote{
-    margin:0 auto; max-width:780px; font-family:'Fraunces', serif; font-style:italic; font-weight:500;
-    font-size:clamp(1.5rem,2.8vw,2.3rem); line-height:1.3;
-  }
+  .quote-band blockquote{margin:0 auto; max-width:780px; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:clamp(1.5rem,2.8vw,2.3rem); line-height:1.3;}
   .quote-band .rustline{width:44px; height:2px; background:var(--rust); margin:0 auto 28px;}
   .quote-band cite{display:block; margin-top:28px; font-style:normal; font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; color:#B9B4A7;}
 
-  /* SERVICES — index list */
   .service-row{display:grid; grid-template-columns:64px 1fr 1.4fr; gap:24px; padding-block:30px; border-top:1px solid var(--line); align-items:baseline;}
   .service-row:last-child{border-bottom:1px solid var(--line);}
   @media (max-width:760px){ .service-row{grid-template-columns:40px 1fr; grid-template-areas:"n t" ". p"; row-gap:8px;} .service-row p{grid-area:p;} .service-row h3{grid-area:t;} .service-row .n{grid-area:n;} }
@@ -150,7 +101,6 @@
   .service-row h3{font-family:'Archivo', sans-serif; font-weight:800; font-size:1.3rem; margin:0; text-transform:uppercase; letter-spacing:-.01em;}
   .service-row p{color:var(--ink-dim); font-size:.92rem; line-height:1.62; margin:0;}
 
-  /* PORTFOLIO */
   .filter-bar{display:flex; align-items:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:2px;}
   .filter-item{padding:16px 22px; font-size:.78rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:var(--ink-dim); border-right:1px solid var(--line);}
   .filter-item.active{color:var(--ink);}
@@ -169,7 +119,6 @@
   .port-label .s{font-size:.74rem; opacity:.82; margin-top:2px;}
   .port-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.72) 100%);}
 
-  /* PROCESS */
   .process{display:flex; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
   @media (max-width:820px){ .process{flex-wrap:wrap;} }
   .step{flex:1; padding:32px 24px; border-right:1px solid var(--line);}
@@ -179,7 +128,6 @@
   .step h3{font-family:'Archivo', sans-serif; font-weight:800; font-size:.96rem; margin:14px 0 8px; text-transform:uppercase;}
   .step p{color:var(--ink-dim); font-size:.87rem; line-height:1.58; margin:0;}
 
-  /* CTA + FOOTER */
   .cta-band{background:var(--ink); color:var(--paper); border-radius:var(--r); padding:72px 44px; display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap;}
   .cta-band h2{max-width:16ch; font-size:clamp(1.8rem,3.4vw,2.6rem);}
   .cta-band .btns{display:flex; gap:12px; flex-wrap:wrap;}
@@ -191,21 +139,14 @@
 
   .note{max-width:var(--max); margin:16px auto 0; text-align:center; font-size:.74rem; color:var(--ink-dim); opacity:.7;}
 
-  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
-    outline:2px solid var(--rust); outline-offset:2px;
-  }
-
-  /* ABOUT */
   .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
   @media (max-width:820px){ .about-grid{grid-template-columns:1fr; gap:34px;} }
   .about-grid p{color:var(--ink-dim); font-size:1rem; line-height:1.7; margin:0 0 20px;}
-  .about-grid p:last-child{margin-bottom:0;}
   .trust-row{margin-top:34px; padding-top:24px; border-top:1px solid var(--line);}
   .trust-row .mono-label{display:block; margin-bottom:16px;}
   .trust-logos{display:flex; gap:32px; flex-wrap:wrap;}
   .trust-logos span{font-family:'Archivo', sans-serif; font-weight:800; font-size:.92rem; letter-spacing:.03em; text-transform:uppercase; color:var(--ink);}
 
-  /* CONTACT FORM */
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
   @media (max-width:820px){ .contact-grid{grid-template-columns:1fr; gap:40px;} }
   .contact-direct{display:flex; flex-direction:column; gap:20px;}
@@ -213,11 +154,7 @@
   .contact-direct .addr{color:var(--ink-dim); font-size:.92rem; line-height:1.6;}
   .field{display:flex; flex-direction:column; gap:8px; margin-bottom:20px;}
   .field label{font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-dim); font-weight:600;}
-  .field input, .field select, .field textarea{
-    font-family:'Work Sans', sans-serif; font-size:.95rem; color:var(--ink);
-    background:var(--paper); border:1px solid var(--line); border-radius:var(--r);
-    padding:13px 14px;
-  }
+  .field input, .field select, .field textarea{font-family:'Work Sans', sans-serif; font-size:.95rem; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:13px 14px;}
   .field textarea{resize:vertical; min-height:96px;}
   form .btn{border:none; cursor:pointer; width:100%; justify-content:center; margin-top:6px;}
 </style>
@@ -226,107 +163,107 @@
 <div class="wrap">
 
   <nav>
-    <a class="logo" href="index.html" style="text-decoration:none;">3DMA</a>
+    <a class="logo" href="index.html">3DMA</a>
     <div class="navlinks">
       <a href="a-propos.html">Studio</a>
-      <a href="services.html">Prestations</a>
-      <a href="realisations.html">Réalisations</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Work</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-right">
       <div class="lang-switch">
-        <a class="active" href="index.html">FR</a>
-        <a href="en/index.html">EN</a>
-        <a href="ar/index.html">AR</a>
+        <a href="../index.html">FR</a>
+        <a class="active" href="index.html">EN</a>
+        <a href="../ar/index.html">AR</a>
       </div>
-      <a class="btn btn-fill" href="contact.html">Devis →</a>
+      <a class="btn btn-fill" href="contact.html">Get a quote →</a>
     </div>
   </nav>
 
   <section class="hero">
     <div class="hero-copy">
-      <span class="mono-label">Studio de rendu 3D — Casablanca</span>
-      <h1 class="disp" style="margin-top:16px;">Rendre<br><span class="accent" style="text-transform:none;">l'irréel</span><br>réel.</h1>
-      <p class="lead">Rendus 3D, visites immersives et maquettes orbitales qui vendent un bien avant la première pierre. 10 ans à convaincre les promoteurs les plus exigeants du Maroc.</p>
-      <a class="btn btn-fill" href="#contact">Démarrer un projet →</a>
+      <span class="mono-label">3D Rendering Studio — Casablanca</span>
+      <h1 class="disp" style="margin-top:16px;">Making<br><span class="accent" style="text-transform:none;">the unbuilt</span><br>real.</h1>
+      <p class="lead">3D renders, 360° immersive tours and orbital models that sell a property before the first stone is laid. 10 years convincing Morocco's most demanding developers.</p>
+      <a class="btn btn-fill" href="contact.html">Start a project →</a>
     </div>
     <div class="hero-visual">
       <div class="main-img">
-        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg" alt="Rendu 3D extérieur, projet résidentiel Zenata, par 3DMA">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg" alt="3D exterior render, Zenata residential project, by 3DMA">
       </div>
-      <div class="hero-index">01 — RÉSIDENCE ZENATA</div>
+      <div class="hero-index">01 — ZENATA RESIDENCE</div>
       <div class="inset">
-        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-1024x768.jpg" alt="Rendu 3D hall vitrine, par 3DMA">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-1024x768.jpg" alt="3D render of a showroom hall, by 3DMA">
       </div>
     </div>
   </section>
 
   <div class="stat-strip">
-    <div class="stat"><div class="n disp">10+</div><div class="l mono-label">Années d'expérience</div></div>
-    <div class="stat"><div class="n disp">04</div><div class="l mono-label">Métiers maîtrisés</div></div>
-    <div class="stat"><div class="n disp">100%</div><div class="l mono-label">Rendu photoréaliste</div></div>
-    <div class="stat"><div class="n disp">CASA</div><div class="l mono-label">Studio basé au Maroc</div></div>
+    <div class="stat"><div class="n disp">10+</div><div class="l mono-label">Years of experience</div></div>
+    <div class="stat"><div class="n disp">04</div><div class="l mono-label">Crafts mastered</div></div>
+    <div class="stat"><div class="n disp">100%</div><div class="l mono-label">Photoreal rendering</div></div>
+    <div class="stat"><div class="n disp">CASA</div><div class="l mono-label">Studio based in Morocco</div></div>
   </div>
 
   <div class="split-banner">
     <div class="split-left"></div>
-    <div class="split-right"><img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="Visite 360 immersive, par 3DMA"></div>
-    <h2 class="disp split-text">Designer<br>l'invisible</h2>
+    <div class="split-right"><img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="360° immersive tour, by 3DMA"></div>
+    <h2 class="disp split-text">Designing<br>the unseen</h2>
   </div>
 
   <section class="sec" id="services">
     <div class="sec-head">
-      <h2 class="disp">Quatre métiers,<br>une promesse</h2>
-      <p>Chaque prestation aide un acheteur à se projeter avant que le bien n'existe.</p>
+      <h2 class="disp">Four crafts,<br>one promise</h2>
+      <p>Every service exists to help a buyer picture a home before it exists.</p>
     </div>
     <div>
-      <div class="service-row"><span class="n">01</span><h3>Rendu 3D</h3><p>Images photoréalistes de façades et d'intérieurs, pour supports de vente et permis de construire.</p></div>
-      <div class="service-row"><span class="n">02</span><h3>Visite 360</h3><p>Un appartement témoin visité depuis un canapé, à toute heure, n'importe où dans le monde.</p></div>
-      <div class="service-row"><span class="n">03</span><h3>Maquette orbitale</h3><p>Une vue d'ensemble tournante pour vendre un lot précis dans un plan de masse complet.</p></div>
-      <div class="service-row"><span class="n">04</span><h3>Shooting photo</h3><p>Une fois le bien livré, la photographie prolonge la même exigence visuelle jusqu'aux clés.</p></div>
+      <div class="service-row"><span class="n">01</span><h3>3D Rendering</h3><p>Photoreal images of façades and interiors, for sales material and building permits.</p></div>
+      <div class="service-row"><span class="n">02</span><h3>360° Tour</h3><p>A model apartment visited from a sofa, any time, anywhere in the world.</p></div>
+      <div class="service-row"><span class="n">03</span><h3>Orbital Model</h3><p>A rotating overview to sell one specific unit within a full masterplan.</p></div>
+      <div class="service-row"><span class="n">04</span><h3>Real Estate Photography</h3><p>Once the property is delivered, photography carries the same visual standard through to the keys.</p></div>
     </div>
   </section>
 
   <section class="sec" id="portfolio">
     <div class="sec-head">
-      <h2 class="disp">Réalisations<br>récentes</h2>
-      <p>Une sélection de projets menés pour des promoteurs marocains.</p>
+      <h2 class="disp">Recent<br>work</h2>
+      <p>A selection of projects delivered for Moroccan developers.</p>
     </div>
     <div class="filter-bar">
-      <div class="filter-item active">Tous</div>
-      <div class="filter-item">Extérieur</div>
-      <div class="filter-item">Intérieur</div>
-      <div class="filter-item">Visite 360</div>
-      <a class="btn btn-fill" href="realisations.html">Voir tout →</a>
+      <div class="filter-item active">All</div>
+      <div class="filter-item">Exterior</div>
+      <div class="filter-item">Interior</div>
+      <div class="filter-item">360° Tour</div>
+      <a class="btn btn-fill" href="realisations.html">View all →</a>
     </div>
     <div class="port-grid">
       <div class="port-card">
-        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg" alt="Rendu 3D extérieur projet Zenata, par 3DMA">
-        <div class="port-label"><div class="t">Résidence Zenata</div><div class="s">Rendu extérieur — Casablanca</div></div>
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2_copy_3072x1521-1024x507.jpg" alt="3D exterior render, Zenata project, by 3DMA">
+        <div class="port-label"><div class="t">Zenata Residence</div><div class="s">Exterior render — Casablanca</div></div>
       </div>
       <div class="port-card">
-        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-1024x768.jpg" alt="Rendu 3D hall vitrine, par 3DMA">
-        <div class="port-label"><div class="t">Hall Showroom</div><div class="s">Rendu intérieur</div></div>
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-1024x768.jpg" alt="3D showroom hall render, by 3DMA">
+        <div class="port-label"><div class="t">Showroom Hall</div><div class="s">Interior render</div></div>
       </div>
       <div class="port-card">
-        <img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="Aperçu visite 360 immersive appartement, par 3DMA">
-        <div class="port-label"><div class="t">Appartement témoin</div><div class="s">Visite 360 immersive</div></div>
+        <img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="Preview of a 360° immersive apartment tour, by 3DMA">
+        <div class="port-label"><div class="t">Model Apartment</div><div class="s">360° immersive tour</div></div>
       </div>
     </div>
-    <p class="note">Aperçu avec les visuels actuels de 3DMA. La galerie complète sera intégrée en haute résolution depuis leur médiathèque.</p>
+    <p class="note">Preview with 3DMA's current visuals. The full gallery will be added in high resolution from their media library.</p>
   </section>
 
   <section class="sec" id="about">
     <div class="sec-head">
-      <h2 class="disp">Le studio</h2>
-      <p>Basé à Casablanca, au service des promoteurs et architectes marocains.</p>
+      <h2 class="disp">The studio</h2>
+      <p>Based in Casablanca, serving Moroccan developers and architects.</p>
     </div>
     <div class="about-grid">
       <div>
-        <p>3DMA existe depuis plus de 10 ans avec un seul objectif : donner à voir un projet avant qu'il ne sorte de terre. Rendu 3D, visite immersive, maquette orbitale ou shooting photo, chaque prestation sert la même cause, transformer un plan technique en une image que l'acheteur peut déjà habiter.</p>
-        <p>Le studio a accompagné des groupes comme Le Méridien, Marriott et l'OMPIC Casablanca sur des projets exigeants, où la fidélité du rendu compte autant que le respect des délais.</p>
+        <p>3DMA has existed for over 10 years with a single goal: showing a project before it leaves the ground. 3D rendering, immersive tours, orbital models or real estate photography — every service serves the same cause, turning a technical plan into an image a buyer can already live in.</p>
+        <p>The studio has worked with groups such as Le Méridien, Marriott and OMPIC Casablanca on demanding projects where accuracy matters as much as deadlines.</p>
         <div class="trust-row">
-          <span class="mono-label">Ont travaillé avec 3DMA</span>
+          <span class="mono-label">Worked with 3DMA</span>
           <div class="trust-logos">
             <span>Le Méridien</span>
             <span>Marriott</span>
@@ -336,39 +273,39 @@
       </div>
       <div class="quote-band">
         <div class="rustline"></div>
-        <blockquote>« Un client n'achète jamais un plan. Il achète ce qu'il voit, ce qu'il ressent, et ce qu'il peut déjà s'imaginer habiter. »</blockquote>
-        <cite>3DMA — Notre philosophie, depuis 10 ans</cite>
+        <blockquote>"A client never buys a plan. They buy what they see, what they feel, and what they can already imagine living in."</blockquote>
+        <cite>3DMA — Our philosophy, 10 years running</cite>
       </div>
     </div>
   </section>
 
   <section class="sec">
     <div class="sec-head">
-      <h2 class="disp">Méthode</h2>
-      <p>Du plan 2D à la livraison finale.</p>
+      <h2 class="disp">Method</h2>
+      <p>From 2D plan to final delivery.</p>
     </div>
     <div class="process">
-      <div class="step"><div class="n">01</div><h3>Brief & plans</h3><p>Réception des plans et du cahier des charges.</p></div>
-      <div class="step"><div class="n">02</div><h3>Modélisation</h3><p>Construction du bâtiment à l'échelle exacte.</p></div>
-      <div class="step"><div class="n">03</div><h3>Lumière & rendu</h3><p>Éclairage, matières et retouche finale.</p></div>
-      <div class="step"><div class="n">04</div><h3>Livraison</h3><p>Fichiers prêts pour brochure et site web.</p></div>
+      <div class="step"><div class="n">01</div><h3>Brief & plans</h3><p>Receiving plans and the project brief.</p></div>
+      <div class="step"><div class="n">02</div><h3>Modeling</h3><p>Building the structure to the exact scale of the project.</p></div>
+      <div class="step"><div class="n">03</div><h3>Light & render</h3><p>Lighting, materials and final retouching.</p></div>
+      <div class="step"><div class="n">04</div><h3>Delivery</h3><p>Final files ready for brochures and the website.</p></div>
     </div>
   </section>
 
   <section class="sec" id="contact">
     <div class="cta-band" style="margin-bottom:56px;">
-      <h2 class="disp">Prêt à montrer votre projet avant qu'il n'existe ?</h2>
+      <h2 class="disp">Ready to show your project before it exists?</h2>
       <div class="btns">
-        <a class="btn btn-rust" href="https://wa.me/212649526006" target="_blank" rel="noopener">WhatsApp direct →</a>
-        <a class="btn btn-line-light" href="tel:+212649526006">Appeler</a>
+        <a class="btn btn-rust" href="https://wa.me/212649526006" target="_blank" rel="noopener">WhatsApp us →</a>
+        <a class="btn btn-line-light" href="tel:+212649526006">Call</a>
       </div>
     </div>
 
     <div class="contact-grid">
       <div class="contact-direct">
-        <span class="mono-label">Coordonnées directes</span>
-        <h3 class="disp" style="font-size:1.4rem;">Casablanca, Maroc</h3>
-        <p class="addr">13 rue Bachir Laalej, Résidence Denalo 2<br>Casablanca, Maroc</p>
+        <span class="mono-label">Direct contact</span>
+        <h3 class="disp" style="font-size:1.4rem;">Casablanca, Morocco</h3>
+        <p class="addr">13 rue Bachir Laalej, Résidence Denalo 2<br>Casablanca, Morocco</p>
         <div class="btns">
           <a class="btn btn-line" href="tel:+212649526006">+212 6 49 52 60 06</a>
           <a class="btn btn-line" href="https://wa.me/212649526006" target="_blank" rel="noopener">WhatsApp</a>
@@ -376,30 +313,30 @@
       </div>
 
       <form onsubmit="return false;">
-        <span class="mono-label" style="display:block; margin-bottom:18px;">Demander un devis</span>
+        <span class="mono-label" style="display:block; margin-bottom:18px;">Request a quote</span>
         <div class="field">
-          <label for="f-name">Nom complet</label>
-          <input type="text" id="f-name" name="name" placeholder="Votre nom" required>
+          <label for="f-name">Full name</label>
+          <input type="text" id="f-name" name="name" placeholder="Your name" required>
         </div>
         <div class="field">
-          <label for="f-email">E-mail</label>
-          <input type="email" id="f-email" name="email" placeholder="vous@exemple.com" required>
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" placeholder="you@example.com" required>
         </div>
         <div class="field">
-          <label for="f-type">Type de projet</label>
+          <label for="f-type">Project type</label>
           <select id="f-type" name="type">
-            <option>Rendu 3D architectural</option>
-            <option>Visite 360 immersive</option>
-            <option>Maquette orbitale</option>
-            <option>Shooting photo immobilier</option>
-            <option>Autre / plusieurs prestations</option>
+            <option>3D architectural rendering</option>
+            <option>360° immersive tour</option>
+            <option>Orbital model</option>
+            <option>Real estate photography</option>
+            <option>Other / several services</option>
           </select>
         </div>
         <div class="field">
-          <label for="f-message">Votre projet en quelques mots</label>
-          <textarea id="f-message" name="message" placeholder="Type de bien, surface, délai souhaité…"></textarea>
+          <label for="f-message">Your project in a few words</label>
+          <textarea id="f-message" name="message" placeholder="Property type, size, desired timeline…"></textarea>
         </div>
-        <button type="submit" class="btn btn-fill">Envoyer la demande →</button>
+        <button type="submit" class="btn btn-fill">Send request →</button>
       </form>
     </div>
   </section>
@@ -408,15 +345,15 @@
     <div class="col">
       <strong style="color:var(--ink); font-family:'Archivo',sans-serif; text-transform:uppercase;">3DMA Studio</strong>
       <span>13 rue Bachir Laalej, Résidence Denalo 2</span>
-      <span>Casablanca, Maroc</span>
+      <span>Casablanca, Morocco</span>
     </div>
     <div class="col">
       <a href="tel:+212649526006">+212 6 49 52 60 06</a>
       <a href="https://wa.me/212649526006">WhatsApp</a>
     </div>
     <div class="col">
-      <a href="services.html">Prestations</a>
-      <a href="realisations.html">Réalisations</a>
+      <a href="services.html">Services</a>
+      <a href="realisations.html">Work</a>
       <a href="contact.html">Contact</a>
     </div>
   </footer>
