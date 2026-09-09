@@ -103,10 +103,24 @@
   .cta-band h2{max-width:20ch; font-size:clamp(1.7rem,3.2vw,2.4rem);}
   .cta-band .btns{display:flex; gap:12px; flex-wrap:wrap;}
 
-  footer{padding-block:42px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.85rem;}
-  footer .col{display:flex; flex-direction:column; gap:6px;}
+  footer{margin-top:72px; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.85rem;}
+  .footer-top{display:flex; justify-content:space-between; gap:48px; flex-wrap:wrap; padding-block:48px 32px;}
+  .footer-brand{display:flex; flex-direction:column; gap:14px; max-width:280px;}
+  .footer-brand img{height:34px; width:auto; display:block;}
+  .footer-tagline{margin:0; line-height:1.6;}
+  .footer-cols{display:flex; gap:56px; flex-wrap:wrap;}
+  .footer-cols .col{display:flex; flex-direction:column; gap:10px;}
+  .footer-heading{display:block; font-family:'Archivo', sans-serif; font-weight:800; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink); margin-bottom:4px;}
   footer a{text-decoration:none; color:var(--ink-dim);}
   footer a:hover{color:var(--rust);}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; padding-block:20px; border-top:1px solid var(--line); font-size:.76rem;}
+  .footer-bottom .lang-switch{margin-right:0;}
+  @media (max-width:700px){
+    .footer-top{flex-direction:column; gap:32px; padding-block:40px 24px;}
+    .footer-cols{gap:32px; width:100%;}
+    .footer-cols .col{flex:1 1 45%; min-width:130px;}
+    .footer-bottom{flex-direction:column; align-items:flex-start; gap:10px;}
+  }
 /* mobile-spacing-fix */
   @media (max-width:600px){
     .sec{padding-block:52px 0;}
@@ -165,20 +179,38 @@
   </div>
 
   <footer>
-    <div class="col">
-      <img src="/assets/logo-footer.png" alt="3DMA Studio — architecture, publicité, design" width="117" height="40" style="height:40px;width:auto;display:block;margin-bottom:6px;" loading="lazy">
-      <span>13 rue Bachir Laalej, Résidence Denalo 2</span>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/assets/logo-footer.png" alt="3DMA Studio — architecture, publicité, design" width="117" height="34" loading="lazy">
+        <p class="footer-tagline">3D rendering studio based in Casablanca — architecture, advertising, design.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="col">
+          <span class="footer-heading">Contact</span>
+          <a href="tel:+212649526006">+212 6 49 52 60 06</a>
+          <a href="https://wa.me/212649526006">WhatsApp</a>
+        </div>
+        <div class="col">
+          <span class="footer-heading">Studio</span>
+          <a href="services.html">Services</a>
+        <a href="realisations.html">Work</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contact</a>
+        </div>
+        <div class="col">
+          <span class="footer-heading">Address</span>
+          <span>13 rue Bachir Laalej, Résidence Denalo 2</span>
       <span>Casablanca, Morocco</span>
+        </div>
+      </div>
     </div>
-    <div class="col">
-      <a href="tel:+212649526006">+212 6 49 52 60 06</a>
-      <a href="https://wa.me/212649526006">WhatsApp</a>
-    </div>
-    <div class="col">
-      <a href="services.html">Services</a>
-      <a href="realisations.html">Work</a>
-      <a href="videos.html">Videos</a>
-      <a href="contact.html">Contact</a>
+    <div class="footer-bottom">
+      <span>© 2026 3DMA Studio. All rights reserved.</span>
+          <div class="lang-switch">
+        <a href="../videos.html">FR</a>
+        <a class="active" href="videos.html">EN</a>
+        <a href="../ar/videos.html">AR</a>
+      </div>
     </div>
   </footer>
 </div>
