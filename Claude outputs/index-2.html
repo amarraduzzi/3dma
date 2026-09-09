@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>استوديو 3DMA — تصميم ثلاثي الأبعاد معماري</title>
+<meta name="description" content="3DMA، استوديو التصميم ثلاثي الأبعاد المعماري والجولات الافتراضية بزاوية 360 درجة في الدار البيضاء. أكثر من 10 سنوات في خدمة المطورين العقاريين المغاربة.">
+<link rel="canonical" href="https://3dma.ma/ar/">
+<link rel="alternate" hreflang="fr" href="https://3dma.ma/">
+<link rel="alternate" hreflang="en" href="https://3dma.ma/en/">
+<link rel="alternate" hreflang="ar" href="https://3dma.ma/ar/">
+<link rel="alternate" hreflang="x-default" href="https://3dma.ma/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3DMA Studio">
+<meta property="og:url" content="https://3dma.ma/ar/">
+<meta property="og:title" content="3DMA — تصميم ثلاثي الأبعاد معماري، الدار البيضاء">
+<meta property="og:image" content="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2-1024x507.jpg">
+<meta property="og:locale" content="ar_MA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --paper:#FAF9F6; --ink:#101010; --ink-dim:#726C61; --rust:#B3421C; --line:#E4E1D8; --r:2px; --max:1260px; }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); overflow-x:hidden; font-family:'Noto Sans Arabic', 'Work Sans', sans-serif; -webkit-font-smoothing:antialiased; padding-inline:18px; direction:rtl;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin-inline:auto;}
+  .disp{font-family:'Cairo', sans-serif; font-weight:800; letter-spacing:0; text-wrap:balance;}
+  .accent{font-family:'Cairo', sans-serif; font-weight:800; color:var(--rust);}
+  .mono-label{font-size:.72rem; letter-spacing:.03em; color:var(--ink-dim); font-weight:600;}
+  .btn{display:inline-flex; align-items:center; gap:10px; border-radius:var(--r); padding:14px 24px; font-size:.82rem; font-weight:700; text-decoration:none; white-space:nowrap;}
+  .btn-fill{background:var(--ink); color:var(--paper);}
+  .btn-fill:hover{background:var(--rust);}
+  .btn-line{border:1px solid var(--ink); color:var(--ink);}
+  .btn-line-light{border:1px solid rgba(250,249,246,.4); color:var(--paper);}
+  .btn-rust{background:var(--rust); color:#fff;}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{outline:2px solid var(--rust); outline-offset:2px;}
+  nav{display:flex; align-items:center; justify-content:space-between; padding-block:26px;}
+  .logo{font-family:'Cairo', sans-serif; font-weight:900; font-size:1.15rem; text-decoration:none; color:var(--ink); direction:ltr;}
+  .navlinks{display:flex; gap:30px; font-size:.85rem; font-weight:600;}
+  .navlinks a{text-decoration:none; color:var(--ink-dim);}
+  .navlinks a:hover{color:var(--ink);}
+    .nav-toggle{display:none; background:none; border:1px solid var(--ink); border-radius:var(--r); width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer; color:var(--ink); margin-inline-start:12px; flex-shrink:0; padding:0;}
+  @media (max-width:800px){
+    nav{flex-wrap:wrap; row-gap:10px;}
+    .nav-toggle{display:flex;}
+    .navlinks{display:none; position:absolute; left:18px; right:18px; top:100%; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); flex-direction:column; gap:0; padding:8px; box-shadow:0 14px 34px rgba(16,16,16,.14); z-index:90;}
+    .navlinks.open{display:flex;}
+    .navlinks a{padding:15px 12px; border-bottom:1px solid var(--line); font-size:.95rem;}
+    .navlinks a:last-child{border-bottom:none;}
+    nav{position:relative;}
+  }
+  @media (max-width:420px){ .nav-right .btn{padding:11px 16px; font-size:.72rem;} }
+  .lang-switch{display:flex; gap:8px; font-size:.72rem; font-weight:700; margin-left:22px; direction:ltr;}
+  .lang-switch a{text-decoration:none; color:var(--ink-dim); padding-bottom:2px;}
+  .lang-switch a.active{color:var(--ink); border-bottom:1.5px solid var(--rust);}
+  .nav-right{display:flex; align-items:center;}
+
+  .hero{display:grid; grid-template-columns:.82fr 1.18fr; gap:36px; align-items:end; padding-block:22px 8px;}
+  @media (max-width:920px){ .hero{grid-template-columns:1fr;} }
+  .hero-copy h1{font-size:clamp(2.5rem,5.4vw,4rem); line-height:1.15; margin:0 0 24px;}
+  .hero-copy p.lead{max-width:42ch; color:var(--ink-dim); font-size:1rem; line-height:1.75; margin:0 0 28px;}
+  .hero-visual{position:relative;}
+  .hero-visual .main-img{aspect-ratio:16/11; overflow:hidden; border-radius:var(--r);}
+  .hero-visual .main-img img{width:100%; height:100%; object-fit:cover;}
+  .hero-visual .inset{position:absolute; width:37%; aspect-ratio:4/3; overflow:hidden; border-radius:var(--r); bottom:-40px; right:-30px; border:6px solid var(--paper); box-shadow:0 16px 34px rgba(16,16,16,.22);}
+  .hero-visual .inset img{width:100%; height:100%; object-fit:cover;}
+  .hero-index{position:absolute; top:16px; left:16px; background:rgba(16,16,16,.65); color:var(--paper); font-family:'Cairo',sans-serif; font-size:.75rem; padding:7px 12px; border-radius:var(--r);}
+  @media (max-width:920px){ .hero-visual .inset{display:none;} }
+
+  .stat-strip{display:flex; margin-top:92px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  @media (max-width:920px){ .stat-strip{margin-top:66px; flex-wrap:wrap;} }
+  .stat{flex:1; padding:24px 22px; border-left:1px solid var(--line);}
+  .stat:last-child{border-left:none;}
+  .stat .n{font-family:'Cairo', sans-serif; font-weight:900; font-size:2.1rem; color:var(--rust); direction:ltr; display:block;}
+  .stat .l{margin-top:5px;}
+  @media (max-width:600px){ .stat{flex:1 1 50%; border-left:1px solid var(--line);} .stat:nth-child(2n){border-left:none;} }
+
+  .split-banner{position:relative; display:flex; isolation:isolate; border-radius:var(--r); overflow:hidden; min-height:320px; margin-block:100px;}
+  @media (max-width:700px){ .split-banner{min-height:220px; margin-block:72px;} }
+  .split-left{flex:1; background:var(--paper);}
+  .split-right{flex:1; position:relative;}
+  .split-right img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
+  .split-text{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; mix-blend-mode:difference; margin:0; z-index:2; pointer-events:none; font-size:clamp(2.2rem,6vw,4.6rem); line-height:1.15;}
+
+  .sec{padding-block:100px 0;}
+  .sec-head{display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:50px;}
+  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem); max-width:18ch;}
+  .sec-head p{color:var(--ink-dim); max-width:34ch; font-size:.95rem; line-height:1.7; margin:0;}
+
+  .quote-band{background:var(--ink); color:var(--paper); border-radius:var(--r); padding:68px 44px; text-align:center;}
+  .quote-band blockquote{margin:0 auto; max-width:780px; font-family:'Cairo', serif; font-weight:600; font-size:clamp(1.35rem,2.4vw,1.9rem); line-height:1.6;}
+  .quote-band .rustline{width:44px; height:2px; background:var(--rust); margin:0 auto 28px;}
+  .quote-band cite{display:block; margin-top:28px; font-size:.78rem; color:#B9B4A7;}
+
+  .service-row{display:grid; grid-template-columns:64px 1fr 1.4fr; gap:24px; padding-block:30px; border-top:1px solid var(--line); align-items:baseline;}
+  .service-row:last-child{border-bottom:1px solid var(--line);}
+  @media (max-width:760px){ .service-row{grid-template-columns:40px 1fr; grid-template-areas:"n t" ". p"; row-gap:8px;} .service-row p{grid-area:p;} .service-row h3{grid-area:t;} .service-row .n{grid-area:n;} }
+  .service-row .n{font-family:'Cairo', sans-serif; font-weight:900; color:var(--rust); font-size:1rem; direction:ltr; display:inline-block;}
+  .service-row h3{font-family:'Cairo', sans-serif; font-weight:800; font-size:1.25rem; margin:0;}
+  .service-row p{color:var(--ink-dim); font-size:.94rem; line-height:1.75; margin:0;}
+
+  .filter-bar{display:flex; align-items:center; flex-wrap:wrap; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:2px;}
+  .filter-item{padding:16px 22px; font-size:.8rem; font-weight:600; color:var(--ink-dim); border-left:1px solid var(--line);}
+  .filter-item.active{color:var(--ink);}
+  .filter-bar .btn{margin-right:auto; border-radius:0;}
+
+  .port-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:2px; background:var(--line);}
+  @media (max-width:820px){ .port-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:520px){ .port-grid{grid-template-columns:1fr;} }
+  .port-card{position:relative; background:var(--paper); overflow:hidden;}
+  .port-card:first-child{grid-row:span 2;}
+  @media (max-width:820px){ .port-card:first-child{grid-row:auto;} }
+  .port-card img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; filter:grayscale(.12) contrast(1.06);}
+  .port-card:first-child img{aspect-ratio:4/5;}
+  .port-label{position:absolute; right:18px; bottom:18px; color:#fff; z-index:2; text-align:right;}
+  .port-label .t{font-family:'Cairo', sans-serif; font-weight:800; font-size:1.05rem;}
+  .port-label .s{font-size:.76rem; opacity:.85; margin-top:2px;}
+  .port-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.72) 100%);}
+
+  .process{display:flex; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  @media (max-width:820px){ .process{flex-wrap:wrap;} }
+  .step{flex:1; padding:32px 24px; border-left:1px solid var(--line);}
+  .step:last-child{border-left:none;}
+  @media (max-width:820px){ .step{flex:1 1 50%; border-left:1px solid var(--line);} .step:nth-child(2n){border-left:none;} }
+  .step .n{font-family:'Cairo', sans-serif; font-weight:900; font-size:1.4rem; color:var(--rust); direction:ltr; display:block;}
+  .step h3{font-family:'Cairo', sans-serif; font-weight:800; font-size:1rem; margin:14px 0 8px;}
+  .step p{color:var(--ink-dim); font-size:.88rem; line-height:1.65; margin:0;}
+
+  .cta-band{background:var(--ink); color:var(--paper); border-radius:var(--r); padding:72px 44px; display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap;}
+  .cta-band h2{max-width:18ch; font-size:clamp(1.7rem,3.2vw,2.4rem);}
+  .cta-band .btns{display:flex; gap:12px; flex-wrap:wrap;}
+
+  footer{padding-block:42px; margin-top:96px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.87rem;}
+  footer .col{display:flex; flex-direction:column; gap:6px;}
+  footer a{text-decoration:none; color:var(--ink-dim);}
+  footer a:hover{color:var(--rust);}
+
+  .note{max-width:var(--max); margin:16px auto 0; text-align:center; font-size:.76rem; color:var(--ink-dim); opacity:.7;}
+
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  @media (max-width:820px){ .about-grid{grid-template-columns:1fr; gap:34px;} }
+  .about-grid p{color:var(--ink-dim); font-size:1rem; line-height:1.8; margin:0 0 20px;}
+  .trust-row{margin-top:34px; padding-top:24px; border-top:1px solid var(--line);}
+  .trust-row .mono-label{display:block; margin-bottom:16px;}
+  .trust-logos{display:flex; gap:32px; flex-wrap:wrap; direction:ltr; justify-content:flex-end;}
+  .trust-logos span{font-family:'Cairo', sans-serif; font-weight:800; font-size:.92rem; color:var(--ink);}
+
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  @media (max-width:820px){ .contact-grid{grid-template-columns:1fr; gap:40px;} }
+  .contact-direct{display:flex; flex-direction:column; gap:20px;}
+  .contact-direct .btns{display:flex; gap:12px; flex-wrap:wrap;}
+  .contact-direct .addr{color:var(--ink-dim); font-size:.94rem; line-height:1.7;}
+  .field{display:flex; flex-direction:column; gap:8px; margin-bottom:20px;}
+  .field label{font-size:.78rem; color:var(--ink-dim); font-weight:600;}
+  .field input, .field select, .field textarea{font-family:'Noto Sans Arabic', sans-serif; font-size:.95rem; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:13px 14px;}
+  .field textarea{resize:vertical; min-height:96px;}
+  form .btn{border:none; cursor:pointer; width:100%; justify-content:center; margin-top:6px;}
+
+  @media (max-width:700px){
+    .split-banner{display:block; min-height:auto; margin-block:40px; isolation:auto;}
+    .split-left{display:none;}
+    .split-right{position:static; height:200px;}
+    .split-right img{position:static;}
+    .split-text{position:static; inset:auto; mix-blend-mode:normal; color:var(--ink); background:var(--paper); pointer-events:auto; padding:20px 4px 0; margin:0; font-size:clamp(1.8rem,8vw,2.6rem);}
+  }
+/* mobile-spacing-fix */
+  @media (max-width:600px){
+    .sec{padding-block:52px 0;}
+    .cta-band{padding:36px 22px; margin-block:48px !important; border-radius:var(--r);}
+    .quote-band{padding:36px 22px;}
+    footer{margin-top:48px !important;}
+    .stat-strip{margin-top:40px !important;}
+    .split-banner{margin-block:40px !important;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="logo" href="index.html">3DMA</a>
+    <div class="navlinks">
+      <a href="a-propos.html">الاستوديو</a>
+      <a href="services.html">الخدمات</a>
+      <a href="realisations.html">الأعمال</a>
+      <a href="videos.html">الفيديوهات</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="lang-switch">
+        <a href="../index.html">FR</a>
+        <a href="../en/index.html">EN</a>
+        <a class="active" href="index.html">AR</a>
+      </div>
+      <a class="btn btn-fill" href="contact.html">اطلب عرض سعر ←</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="mono-label">استوديو التصميم ثلاثي الأبعاد — الدار البيضاء</span>
+      <h1 class="disp" style="margin-top:16px;">نُحوّل<br><span class="accent">الخيال</span><br>إلى واقع.</h1>
+      <p class="lead">عروض ثلاثية الأبعاد، وجولات افتراضية بزاوية 360 درجة، ومجسمات مدارية تُقنع المشتري قبل وضع حجر الأساس. أكثر من 10 سنوات من إقناع كبار المطورين العقاريين بالمغرب.</p>
+      <a class="btn btn-fill" href="contact.html">ابدأ مشروعك ←</a>
+    </div>
+    <div class="hero-visual">
+      <div class="main-img">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2-1024x507.jpg" alt="عرض ثلاثي الأبعاد خارجي، مشروع إقامة زناتة السكني، من إنجاز 3DMA">
+      </div>
+      <div class="hero-index">01 — إقامة زناتة</div>
+      <div class="inset">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-scaled.jpg" alt="عرض ثلاثي الأبعاد لقاعة استقبال، من إنجاز 3DMA">
+      </div>
+    </div>
+  </section>
+
+  <div class="stat-strip">
+    <div class="stat"><span class="n disp">+10</span><div class="l mono-label">سنوات خبرة</div></div>
+    <div class="stat"><span class="n disp">04</span><div class="l mono-label">حرف نتقنها</div></div>
+    <div class="stat"><span class="n disp">100%</span><div class="l mono-label">عرض واقعي</div></div>
+    <div class="stat"><span class="n disp">CASA</span><div class="l mono-label">استوديو مقره بالمغرب</div></div>
+  </div>
+
+  <div class="split-banner">
+    <div class="split-left"></div>
+    <div class="split-right"><img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="جولة افتراضية بزاوية 360 درجة، من إنجاز 3DMA"></div>
+    <h2 class="disp split-text">تصميم<br>غير المرئي</h2>
+  </div>
+
+  <section class="sec" id="services">
+    <div class="sec-head">
+      <h2 class="disp">أربع حرف،<br>وعد واحد</h2>
+      <p>كل خدمة تساعد المشتري على تخيّل العقار قبل أن يوجد.</p>
+    </div>
+    <div>
+      <div class="service-row"><span class="n">01</span><h3>عرض ثلاثي الأبعاد</h3><p>صور واقعية للواجهات والديكورات الداخلية، لمواد البيع ورخص البناء.</p></div>
+      <div class="service-row"><span class="n">02</span><h3>جولة 360 درجة</h3><p>شقة نموذجية تُزار من الأريكة، في أي وقت وأي مكان في العالم.</p></div>
+      <div class="service-row"><span class="n">03</span><h3>مجسم مداري</h3><p>نظرة شاملة دوّارة لبيع وحدة محددة ضمن مخطط عام كامل.</p></div>
+      <div class="service-row"><span class="n">04</span><h3>تصوير عقاري</h3><p>بعد تسليم العقار، يواصل التصوير الاحترافي نفس مستوى الجودة البصرية حتى تسليم المفاتيح.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="portfolio">
+    <div class="sec-head">
+      <h2 class="disp">أعمال<br>حديثة</h2>
+      <p>مجموعة مختارة من المشاريع المنجزة لمطورين مغاربة.</p>
+    </div>
+    <div class="filter-bar">
+      <div class="filter-item active">الكل</div>
+      <div class="filter-item">خارجي</div>
+      <div class="filter-item">داخلي</div>
+      <div class="filter-item">جولة 360</div>
+      <a class="btn btn-fill" href="realisations.html">عرض الكل ←</a>
+    </div>
+    <div class="port-grid">
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2-1024x507.jpg" alt="عرض ثلاثي الأبعاد خارجي لمشروع زناتة، من إنجاز 3DMA">
+        <div class="port-label"><div class="t">إقامة زناتة</div><div class="s">عرض خارجي — الدار البيضاء</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-scaled.jpg" alt="عرض ثلاثي الأبعاد لقاعة استقبال، من إنجاز 3DMA">
+        <div class="port-label"><div class="t">قاعة استقبال</div><div class="s">عرض داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="معاينة جولة افتراضية بزاوية 360 درجة لشقة، من إنجاز 3DMA">
+        <div class="port-label"><div class="t">شقة نموذجية</div><div class="s">جولة 360 افتراضية</div></div>
+      </div>
+    </div>
+    <p class="note">معاينة باستخدام الصور الحالية لـ3DMA. سيتم إضافة المعرض الكامل بدقة عالية من مكتبة الوسائط الخاصة بهم.</p>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="sec-head">
+      <h2 class="disp">الاستوديو</h2>
+      <p>مقرّه الدار البيضاء، في خدمة المطورين والمهندسين المعماريين المغاربة.</p>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>تأسس استوديو 3DMA منذ أكثر من 10 سنوات بهدف واحد: إظهار المشروع قبل أن يخرج من الأرض. عرض ثلاثي الأبعاد، جولة افتراضية، مجسم مداري أو تصوير عقاري، كل خدمة تخدم نفس الغاية، تحويل مخطط تقني إلى صورة يمكن للمشتري أن يتخيل نفسه يسكنها بالفعل.</p>
+        <p>رافق الاستوديو مجموعات مثل Le Méridien وMarriott وOMPIC الدار البيضاء في مشاريع دقيقة، حيث تُعتبر جودة العرض بقدر أهمية احترام الآجال.</p>
+        <div class="trust-row">
+          <span class="mono-label">عملاء تعاملوا مع 3DMA</span>
+          <div class="trust-logos">
+            <span>Le Méridien</span>
+            <span>Marriott</span>
+            <span>OMPIC Casablanca</span>
+          </div>
+        </div>
+      </div>
+      <div class="quote-band">
+        <div class="rustline"></div>
+        <blockquote>« العميل لا يشتري مخططاً أبداً. إنه يشتري ما يراه، وما يشعر به، وما يمكنه أن يتخيل نفسه يسكنه بالفعل. »</blockquote>
+        <cite>3DMA — فلسفتنا منذ 10 سنوات</cite>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-head">
+      <h2 class="disp">المنهجية</h2>
+      <p>من المخطط ثنائي الأبعاد إلى التسليم النهائي.</p>
+    </div>
+    <div class="process">
+      <div class="step"><span class="n">01</span><h3>الإحاطة والمخططات</h3><p>استلام المخططات ودفتر الشروط.</p></div>
+      <div class="step"><span class="n">02</span><h3>النمذجة</h3><p>بناء الهيكل بالمقياس الدقيق للمشروع.</p></div>
+      <div class="step"><span class="n">03</span><h3>الإضاءة والعرض</h3><p>الإضاءة والخامات واللمسات الأخيرة.</p></div>
+      <div class="step"><span class="n">04</span><h3>التسليم</h3><p>ملفات جاهزة للكتيبات والموقع الإلكتروني.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="cta-band" style="margin-bottom:56px;">
+      <h2 class="disp">هل أنت مستعد لعرض مشروعك قبل أن يوجد؟</h2>
+      <div class="btns">
+        <a class="btn btn-rust" href="https://wa.me/212649526006" target="_blank" rel="noopener">تواصل عبر واتساب ←</a>
+        <a class="btn btn-line-light" href="tel:+212649526006">اتصل بنا</a>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-direct">
+        <span class="mono-label">التواصل المباشر</span>
+        <h3 class="disp" style="font-size:1.35rem;">الدار البيضاء، المغرب</h3>
+        <p class="addr">13 شارع بشير لعلج، إقامة دينالو 2<br>الدار البيضاء، المغرب</p>
+        <div class="btns">
+          <a class="btn btn-line" style="direction:ltr;" href="tel:+212649526006">+212 6 49 52 60 06</a>
+          <a class="btn btn-line" href="https://wa.me/212649526006" target="_blank" rel="noopener">واتساب</a>
+        </div>
+      </div>
+
+      <form onsubmit="return false;">
+        <span class="mono-label" style="display:block; margin-bottom:18px;">اطلب عرض سعر</span>
+        <div class="field">
+          <label for="f-name">الاسم الكامل</label>
+          <input type="text" id="f-name" name="name" placeholder="اسمك" required>
+        </div>
+        <div class="field">
+          <label for="f-email">البريد الإلكتروني</label>
+          <input type="email" id="f-email" name="email" placeholder="you@example.com" style="direction:ltr; text-align:right;" required>
+        </div>
+        <div class="field">
+          <label for="f-type">نوع المشروع</label>
+          <select id="f-type" name="type">
+            <option>عرض ثلاثي الأبعاد معماري</option>
+            <option>جولة 360 افتراضية</option>
+            <option>مجسم مداري</option>
+            <option>تصوير عقاري</option>
+            <option>أخرى / عدة خدمات</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-message">مشروعك بإيجاز</label>
+          <textarea id="f-message" name="message" placeholder="نوع العقار، المساحة، المدة المطلوبة…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-fill">إرسال الطلب ←</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="col">
+      <strong style="color:var(--ink); font-family:'Cairo',sans-serif;">3DMA Studio</strong>
+      <span>13 شارع بشير لعلج، إقامة دينالو 2</span>
+      <span>الدار البيضاء، المغرب</span>
+    </div>
+    <div class="col">
+      <a href="tel:+212649526006" style="direction:ltr; display:inline-block;">+212 6 49 52 60 06</a>
+      <a href="https://wa.me/212649526006">واتساب</a>
+    </div>
+    <div class="col">
+      <a href="services.html">الخدمات</a>
+      <a href="realisations.html">الأعمال</a>
+      <a href="videos.html">الفيديوهات</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </footer>
+</div>
+
+
+<script>
+(function(){
+  var t=document.getElementById('navToggle');
+  var n=document.querySelector('.navlinks');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  n.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
+<a href="https://wa.me/212649526006" target="_blank" rel="noopener" class="wa-float" aria-label="تواصل عبر واتساب">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 2 .95.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
+</a>
+<style>
+  .wa-float{position:fixed; left:20px; bottom:20px; z-index:80; width:56px; height:56px; background:#25D366; border-radius:var(--r,2px); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,.28); transition:transform .2s;}
+  .wa-float:hover{transform:scale(1.06);}
+  @media (max-width:800px){ .wa-float{width:50px; height:50px; left:14px; bottom:14px;} }
+</style>
+</body>
+</html>

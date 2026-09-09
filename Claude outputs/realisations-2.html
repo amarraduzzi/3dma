@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الأعمال — 3DMA Studio</title>
+<meta name="description" content="مشاريع التصميم ثلاثي الأبعاد والجولات الافتراضية والمجسمات التي أنجزها استوديو 3DMA لمطورين ومهندسين معماريين مغاربة.">
+<link rel="canonical" href="https://3dma.ma/ar/realisations.html">
+<link rel="alternate" hreflang="fr" href="https://3dma.ma/realisations.html">
+<link rel="alternate" hreflang="en" href="https://3dma.ma/en/realisations.html">
+<link rel="alternate" hreflang="ar" href="https://3dma.ma/ar/realisations.html">
+<link rel="alternate" hreflang="x-default" href="https://3dma.ma/realisations.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3DMA Studio">
+<meta property="og:url" content="https://3dma.ma/ar/realisations.html">
+<meta property="og:title" content="الأعمال — 3DMA Studio">
+<meta property="og:image" content="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2-1024x507.jpg">
+<meta property="og:locale" content="ar_MA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --paper:#FAF9F6; --ink:#101010; --ink-dim:#726C61; --rust:#B3421C; --line:#E4E1D8; --r:2px; --max:1260px; }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); overflow-x:hidden; font-family:'Noto Sans Arabic', sans-serif; -webkit-font-smoothing:antialiased; padding-inline:18px; direction:rtl;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin-inline:auto;}
+  .disp{font-family:'Cairo', sans-serif; font-weight:800; text-wrap:balance;}
+  .accent{font-family:'Cairo', sans-serif; font-weight:800; color:var(--rust);}
+  .mono-label{font-size:.72rem; color:var(--ink-dim); font-weight:600;}
+  .btn{display:inline-flex; align-items:center; gap:10px; border-radius:var(--r); padding:14px 24px; font-size:.82rem; font-weight:700; text-decoration:none; white-space:nowrap;}
+  .btn-fill{background:var(--ink); color:var(--paper);}
+  .btn-fill:hover{background:var(--rust);}
+  .btn-rust{background:var(--rust); color:#fff;}
+  .btn-line-light{border:1px solid rgba(250,249,246,.4); color:var(--paper);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--rust); outline-offset:2px;}
+  nav{display:flex; align-items:center; justify-content:space-between; padding-block:26px;}
+  .logo{font-family:'Cairo', sans-serif; font-weight:900; font-size:1.15rem; text-decoration:none; color:var(--ink); direction:ltr;}
+  .navlinks{display:flex; gap:30px; font-size:.85rem; font-weight:600;}
+  .navlinks a{text-decoration:none; color:var(--ink-dim);}
+  .navlinks a:hover{color:var(--ink);}
+    .nav-toggle{display:none; background:none; border:1px solid var(--ink); border-radius:var(--r); width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer; color:var(--ink); margin-inline-start:12px; flex-shrink:0; padding:0;}
+  @media (max-width:800px){
+    nav{flex-wrap:wrap; row-gap:10px;}
+    .nav-toggle{display:flex;}
+    .navlinks{display:none; position:absolute; left:18px; right:18px; top:100%; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); flex-direction:column; gap:0; padding:8px; box-shadow:0 14px 34px rgba(16,16,16,.14); z-index:90;}
+    .navlinks.open{display:flex;}
+    .navlinks a{padding:15px 12px; border-bottom:1px solid var(--line); font-size:.95rem;}
+    .navlinks a:last-child{border-bottom:none;}
+    nav{position:relative;}
+  }
+  @media (max-width:420px){ .nav-right .btn{padding:11px 16px; font-size:.72rem;} }
+  .lang-switch{display:flex; gap:8px; font-size:.72rem; font-weight:700; margin-left:22px; direction:ltr;}
+  .lang-switch a{text-decoration:none; color:var(--ink-dim); padding-bottom:2px;}
+  .lang-switch a.active{color:var(--ink); border-bottom:1.5px solid var(--rust);}
+  .nav-right{display:flex; align-items:center;}
+
+  .page-head{padding-block:38px 50px; border-bottom:1px solid var(--line);}
+  .page-head .mono-label{margin-bottom:16px; display:block;}
+  .page-head h1{font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.2; max-width:16ch;}
+  .page-head p{max-width:46ch; color:var(--ink-dim); font-size:1rem; line-height:1.75; margin-top:20px;}
+
+  .filter-bar{display:flex; align-items:center; border-bottom:1px solid var(--line); margin-bottom:2px; flex-wrap:wrap;}
+  .filter-item{padding:16px 22px; font-size:.8rem; font-weight:600; color:var(--ink-dim); border-left:1px solid var(--line);}
+  .filter-item.active{color:var(--ink);}
+
+  .case{display:grid; grid-template-columns:1.3fr 1fr; gap:40px; padding-block:56px; border-bottom:1px solid var(--line); align-items:center;}
+  @media (max-width:860px){ .case{grid-template-columns:1fr; gap:22px;} }
+  .case img{width:100%; aspect-ratio:16/10; object-fit:cover; border-radius:var(--r);}
+  .case .tag{color:var(--rust); font-family:'Cairo',sans-serif; font-weight:800; font-size:.8rem;}
+  .case h2{font-size:clamp(1.4rem,2.4vw,1.9rem); margin:12px 0 12px;}
+  .case p{color:var(--ink-dim); font-size:.96rem; line-height:1.75; margin:0;}
+
+  .index-block{padding-block:70px;}
+  .index-block .sec-head{max-width:680px; margin-bottom:34px;}
+  .index-block h2{font-size:clamp(1.6rem,2.8vw,2.1rem);}
+  .index-block p.lead{color:var(--ink-dim); font-size:.95rem; line-height:1.7; margin-top:12px;}
+
+  .cta-band{background:var(--ink); color:var(--paper); border-radius:var(--r); padding:72px 44px; display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap; margin-block:80px;}
+  .cta-band h2{max-width:18ch; font-size:clamp(1.7rem,3.2vw,2.4rem);}
+  .cta-band .btns{display:flex; gap:12px; flex-wrap:wrap;}
+
+  footer{padding-block:42px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid var(--line); color:var(--ink-dim); font-size:.87rem;}
+  footer .col{display:flex; flex-direction:column; gap:6px;}
+  footer a{text-decoration:none; color:var(--ink-dim);}
+  footer a:hover{color:var(--rust);}
+  .note{max-width:var(--max); margin:16px auto 0; text-align:center; font-size:.76rem; color:var(--ink-dim); opacity:.7;}
+
+  .full-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:2px; background:var(--line); margin-bottom:2px;}
+  .port-card{position:relative; background:var(--paper); overflow:hidden;}
+  .port-card img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; filter:grayscale(.12) contrast(1.06);}
+  .port-label{position:absolute; right:14px; bottom:12px; color:#fff; z-index:2; text-align:right;}
+  .port-label .t{font-family:'Cairo', sans-serif; font-weight:800; font-size:.92rem;}
+  .port-label .s{font-size:.72rem; opacity:.85; margin-top:2px;}
+  .port-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.72) 100%);}
+/* mobile-spacing-fix */
+  @media (max-width:600px){
+    .sec{padding-block:52px 0;}
+    .cta-band{padding:36px 22px; margin-block:48px !important; border-radius:var(--r);}
+    .quote-band{padding:36px 22px;}
+    footer{margin-top:48px !important;}
+    .stat-strip{margin-top:40px !important;}
+    .split-banner{margin-block:40px !important;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="index.html">3DMA</a>
+    <div class="navlinks">
+      <a href="a-propos.html">الاستوديو</a>
+      <a href="services.html">الخدمات</a>
+      <a href="realisations.html">الأعمال</a>
+      <a href="videos.html">الفيديوهات</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="lang-switch">
+        <a href="../realisations.html">FR</a>
+        <a href="../en/realisations.html">EN</a>
+        <a class="active" href="realisations.html">AR</a>
+      </div>
+      <a class="btn btn-fill" href="contact.html">اطلب عرض سعر ←</a>
+    </div>
+  </nav>
+
+  <div class="page-head">
+    <span class="mono-label">الأعمال</span>
+    <h1 class="disp">العمل، <span class="accent">مشروعًا تلو الآخر.</span></h1>
+    <p>مجموعة مختارة من عروض ثلاثية الأبعاد وجولات افتراضية ومجسمات أُنجزت لمطورين مغاربة.</p>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-item active">الكل</div>
+    <div class="filter-item">عرض خارجي</div>
+    <div class="filter-item">عرض داخلي</div>
+    <div class="filter-item">جولة 360</div>
+  </div>
+
+  <div class="case">
+    <img src="https://3dma.ma/wp-content/uploads/2025/01/VISITE-360-PREVIEW-1024x576.jpg" alt="معاينة جولة افتراضية بزاوية 360 درجة، من إنجاز 3DMA">
+    <div>
+      <span class="tag">جولة 360 افتراضية</span>
+      <h2 class="disp">شقة نموذجية</h2>
+      <p>جولة افتراضية بزاوية 360 درجة لشقة نموذجية، يمكن معاينتها عن بُعد من طرف المشترين المحتملين.</p>
+    </div>
+  </div>
+
+  <div class="index-block">
+    <div class="sec-head">
+      <h2 class="disp">المحفظة الكاملة</h2>
+      <p class="lead">41 عرضًا ومخططًا ومشروعًا مستخرجة مباشرة من مكتبة الوسائط الخاصة بـ 3dma.ma.</p>
+    </div>
+  </div>
+  <div class="full-grid">
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/MAR_zenata_EXT_2-1024x507.jpg" alt="تصميم ثلاثي الأبعاد — إقامة زناتة, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">إقامة زناتة</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hallvitrine_copy_3072x2304-scaled.jpg" alt="تصميم ثلاثي الأبعاد — قاعة استقبال, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">قاعة استقبال</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/villarim13000_copy_3072x1851-1024x617.jpg" alt="تصميم ثلاثي الأبعاد — فيلا ريم, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">فيلا ريم</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/noria_02_copy_1920x2304.jpg" alt="تصميم ثلاثي الأبعاد — نوريا, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">نوريا</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/hammam_copy_2634x2304-1024x896.jpg" alt="تصميم ثلاثي الأبعاد — حمّام, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">حمّام</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/aljinane_M1-1_copy_3072x1745-1024x582.jpg" alt="تصميم ثلاثي الأبعاد — الجنان, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">الجنان</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/terrasse_2_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — تراس, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">تراس</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/6_terrains_ciel_copy_3072x2015-1024x672.jpg" alt="تصميم ثلاثي الأبعاد — 6 أراضٍ — منظر سماوي, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">6 أراضٍ — منظر سماوي</div><div class="s">نظرة شاملة</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/ch_enfants_copy_3072x2161-1024x720.jpg" alt="تصميم ثلاثي الأبعاد — غرفة الأطفال, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">غرفة الأطفال</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/lopalesquare_c9_piscineprive_copy_3072x2113-1024x704.jpg" alt="تصميم ثلاثي الأبعاد — لوبال سكوير — مسبح خاص, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لوبال سكوير — مسبح خاص</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/axo_02-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — منظور محوري, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">منظور محوري</div><div class="s">نظرة شاملة</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/v2_01_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — نسخة V2, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">نسخة V2</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/chambreinvites-1_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — غرفة الضيوف, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">غرفة الضيوف</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/25square_01.RGB_color.0000-1-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — 25 سكوير, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">25 سكوير</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/planrepartition_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — مخطط التوزيع, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">مخطط التوزيع</div><div class="s">مخطط</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/VILLA23000_copy_3000x2304-1024x786.jpg" alt="تصميم ثلاثي الأبعاد — فيلا 23000, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">فيلا 23000</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/cuisine-2_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — مطبخ, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">مطبخ</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/LOPALE_pmasse_1_copy_3072x2015-1024x672.jpg" alt="تصميم ثلاثي الأبعاد — لوبال — مخطط عام, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لوبال — مخطط عام</div><div class="s">نظرة شاملة</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/meridiench_blanc_copy_2893x2304-1024x816.jpg" alt="تصميم ثلاثي الأبعاد — لو ميريديان — غرفة, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لو ميريديان — غرفة</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/marine_HD_PRINT_copy_2743x2304-1024x860.jpg" alt="تصميم ثلاثي الأبعاد — منظر بحري, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">منظر بحري</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/salonv1-1_copy_3072x2304-scaled.jpg" alt="تصميم ثلاثي الأبعاد — صالون, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">صالون</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/lobby1_copy_3072x1920-1024x640.jpg" alt="تصميم ثلاثي الأبعاد — لوبي, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لوبي</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/SELA_MASTERhd_copy_3072x1843-1024x614.jpg" alt="تصميم ثلاثي الأبعاد — سيلا — الجناح الرئيسي, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">سيلا — الجناح الرئيسي</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/villav6-gigapixel-art-width-5000px_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — فيلا V6, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">فيلا V6</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/05houdaexcelo.RGB_color.0000_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — هدى إكسيلو, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">هدى إكسيلو</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/boardroom_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — قاعة الاجتماعات, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">قاعة الاجتماعات</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/officeafique__cuisine_1_copy_3072x2049-1024x683.jpg" alt="تصميم ثلاثي الأبعاد — مطبخ المكتب, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">مطبخ المكتب</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/20240819_121934_copy_3072x2015-1024x672.jpg" alt="تصميم ثلاثي الأبعاد — زيارة الموقع, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">زيارة الموقع</div><div class="s">الموقع</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/sahel_2-architectural-width-10000px2_copy_3072x2048-1024x683.jpg" alt="تصميم ثلاثي الأبعاد — الساحل, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">الساحل</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/3d-floorplan-detailled-2017-3d-model-max-fbx-1_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — مخطط ثلاثي الأبعاد مفصل, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">مخطط ثلاثي الأبعاد مفصل</div><div class="s">مخطط</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/salle-a-manger_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — غرفة الطعام, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">غرفة الطعام</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/LOPALE_c5_copy_3072x2050-1024x683.jpg" alt="تصميم ثلاثي الأبعاد — لوبال — C5, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لوبال — C5</div><div class="s">خارجي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/chambre_p_copy_3072x2304-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — غرفة نوم رئيسية, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">غرفة نوم رئيسية</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/meridien-ch_blanc-1-1024x816.jpg" alt="تصميم ثلاثي الأبعاد — لو ميريديان — غرفة بيضاء, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لو ميريديان — غرفة بيضاء</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2024/12/chambre_4-1024x917.jpg" alt="تصميم ثلاثي الأبعاد — غرفة نوم, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">غرفة نوم</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/meridien-marocain-2-scaled-e1735151030130-1024x450.jpg" alt="تصميم ثلاثي الأبعاد — لو ميريديان — صالون مغربي, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">لو ميريديان — صالون مغربي</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/salon_02-1024x641.jpg" alt="تصميم ثلاثي الأبعاد — تهيئة صالون, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">تهيئة صالون</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/salle-de-reunion-1024x768.jpg" alt="تصميم ثلاثي الأبعاد — قاعة اجتماعات, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">قاعة اجتماعات</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/salle-de-bain-1024x938.jpg" alt="تصميم ثلاثي الأبعاد — حمّام, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">حمّام</div><div class="s">داخلي</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/pmasse-ag-wm-1024x598.jpg" alt="تصميم ثلاثي الأبعاد — حدائق أكادير — مخطط عام, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">حدائق أكادير — مخطط عام</div><div class="s">نظرة شاملة</div></div>
+      </div>
+      <div class="port-card">
+        <img src="https://3dma.ma/wp-content/uploads/2020/11/Photo_1588273064182-1024x614.jpg" alt="تصميم ثلاثي الأبعاد — مسبح — كازاباي, par 3DMA" width="600" height="450" loading="lazy" decoding="async" style="aspect-ratio:4/3;">
+        <div class="port-label"><div class="t">مسبح — كازاباي</div><div class="s">خارجي</div></div>
+      </div>
+  </div>
+  <p class="note">معرض أُعيد تجميعه من مكتبة وسائط ووردبريس الخاصة بـ 3dma.ma. تتخلل الصور الحديثة (2024) بعض الصور القديمة (2020).</p>
+
+  <div class="cta-band">
+    <h2 class="disp">مشروعك، القادم على هذه القائمة؟</h2>
+    <div class="btns">
+      <a class="btn btn-rust" href="https://wa.me/212649526006" target="_blank" rel="noopener">تواصل عبر واتساب ←</a>
+      <a class="btn btn-line-light" href="contact.html">شاهد النموذج</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="col">
+      <strong style="color:var(--ink); font-family:'Cairo',sans-serif;">3DMA Studio</strong>
+      <span>13 شارع بشير لعلج، إقامة دينالو 2</span>
+      <span>الدار البيضاء، المغرب</span>
+    </div>
+    <div class="col">
+      <a href="tel:+212649526006" style="direction:ltr; display:inline-block;">+212 6 49 52 60 06</a>
+      <a href="https://wa.me/212649526006">واتساب</a>
+    </div>
+    <div class="col">
+      <a href="services.html">الخدمات</a>
+      <a href="realisations.html">الأعمال</a>
+      <a href="videos.html">الفيديوهات</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </footer>
+</div>
+
+
+<script>
+(function(){
+  var t=document.getElementById('navToggle');
+  var n=document.querySelector('.navlinks');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  n.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
+<a href="https://wa.me/212649526006" target="_blank" rel="noopener" class="wa-float" aria-label="تواصل عبر واتساب">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 2 .95.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
+</a>
+<style>
+  .wa-float{position:fixed; left:20px; bottom:20px; z-index:80; width:56px; height:56px; background:#25D366; border-radius:var(--r,2px); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,.28); transition:transform .2s;}
+  .wa-float:hover{transform:scale(1.06);}
+  @media (max-width:800px){ .wa-float{width:50px; height:50px; left:14px; bottom:14px;} }
+</style>
+</body>
+</html>
