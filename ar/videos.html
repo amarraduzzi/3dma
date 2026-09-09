@@ -51,10 +51,9 @@
     .navlinks a{padding:15px 12px; border-bottom:1px solid var(--line); font-size:.95rem;}
     .navlinks a:last-child{border-bottom:none;}
     nav{position:relative;}
-    .nav-right{flex-wrap:wrap; justify-content:flex-end; row-gap:10px;}
-    .nav-right .btn{order:1;}
-    .nav-toggle{order:2; margin-inline-start:10px;}
-    .lang-switch{order:3; flex-basis:100%; justify-content:flex-end; margin-right:0;}
+    .nav-toggle{order:2;}
+    .nav-right{order:3; flex-basis:100%; display:flex; justify-content:space-between; align-items:center; margin-top:2px;}
+    .lang-switch{margin-right:0;}
   }
   @media (max-width:420px){ .nav-right .btn{padding:11px 16px; font-size:.72rem;} }
   .lang-switch{display:flex; gap:8px; font-size:.72rem; font-weight:700; margin-left:22px; direction:ltr;}
@@ -131,7 +130,6 @@
       <a href="contact.html">اتصل بنا</a>
     </div>
     <div class="nav-right">
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="lang-switch">
         <a href="../videos.html">FR</a>
         <a href="../en/videos.html">EN</a>
@@ -139,6 +137,7 @@
       </div>
       <a class="btn btn-fill" href="contact.html">اطلب عرض سعر ←</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   </nav>
 
   <div class="page-head">
