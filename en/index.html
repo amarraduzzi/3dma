@@ -37,7 +37,7 @@
   :root{ --paper:#FAF9F6; --ink:#101010; --ink-dim:#726C61; --rust:#B3421C; --line:#E4E1D8; --r:2px; --max:1260px; }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
-  body{background:var(--paper); color:var(--ink); font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing:antialiased; padding-inline:18px;}
+  body{background:var(--paper); color:var(--ink); overflow-x:hidden; font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif; -webkit-font-smoothing:antialiased; padding-inline:18px;}
   img{max-width:100%; display:block;}
   a{color:inherit;}
   .wrap{max-width:var(--max); margin-inline:auto;}
@@ -56,7 +56,17 @@
   .navlinks{display:flex; gap:34px; font-size:.8rem; font-weight:500;}
   .navlinks a{text-decoration:none; color:var(--ink-dim);}
   .navlinks a.on, .navlinks a:hover{color:var(--ink);}
-  @media (max-width:800px){ .navlinks{display:none;} }
+    .nav-toggle{display:none; background:none; border:1px solid var(--ink); border-radius:var(--r); width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer; color:var(--ink); margin-inline-start:12px; flex-shrink:0; padding:0;}
+  @media (max-width:800px){
+    nav{flex-wrap:wrap; row-gap:10px;}
+    .nav-toggle{display:flex;}
+    .navlinks{display:none; position:absolute; left:18px; right:18px; top:100%; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); flex-direction:column; gap:0; padding:8px; box-shadow:0 14px 34px rgba(16,16,16,.14); z-index:90;}
+    .navlinks.open{display:flex;}
+    .navlinks a{padding:15px 12px; border-bottom:1px solid var(--line); font-size:.95rem;}
+    .navlinks a:last-child{border-bottom:none;}
+    nav{position:relative;}
+  }
+  @media (max-width:420px){ .nav-right .btn{padding:11px 16px; font-size:.72rem;} }
   .lang-switch{display:flex; gap:8px; font-size:.72rem; font-weight:700; letter-spacing:.04em; margin-right:22px;}
   .lang-switch a{text-decoration:none; color:var(--ink-dim); padding-bottom:2px;}
   .lang-switch a.active{color:var(--ink); border-bottom:1.5px solid var(--rust);}
@@ -106,10 +116,10 @@
   .service-row h3{font-family:'Archivo', sans-serif; font-weight:800; font-size:1.3rem; margin:0; text-transform:uppercase; letter-spacing:-.01em;}
   .service-row p{color:var(--ink-dim); font-size:.92rem; line-height:1.62; margin:0;}
 
-  .filter-bar{display:flex; align-items:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:2px;}
+  .filter-bar{display:flex; align-items:center; flex-wrap:wrap; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:2px;}
   .filter-item{padding:16px 22px; font-size:.78rem; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:var(--ink-dim); border-right:1px solid var(--line);}
   .filter-item.active{color:var(--ink);}
-  .filter-bar .btn{margin-left:auto; border-radius:0;}
+  .filter-bar .btn{margin-left:auto; border-radius:0;} @media (max-width:560px){ .filter-bar .btn{flex:1 1 100%; margin-left:0; justify-content:center; margin-top:2px;} }
 
   .port-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:2px; background:var(--line);}
   @media (max-width:820px){ .port-grid{grid-template-columns:1fr 1fr;} }
@@ -162,6 +172,23 @@
   .field input, .field select, .field textarea{font-family:'Work Sans', sans-serif; font-size:.95rem; color:var(--ink); background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:13px 14px;}
   .field textarea{resize:vertical; min-height:96px;}
   form .btn{border:none; cursor:pointer; width:100%; justify-content:center; margin-top:6px;}
+
+  @media (max-width:700px){
+    .split-banner{display:block; min-height:auto; margin-block:40px; isolation:auto;}
+    .split-left{display:none;}
+    .split-right{position:static; height:200px;}
+    .split-right img{position:static;}
+    .split-text{position:static; inset:auto; mix-blend-mode:normal; color:var(--ink); background:var(--paper); pointer-events:auto; padding:20px 4px 0; margin:0; font-size:clamp(1.8rem,8vw,2.6rem);}
+  }
+/* mobile-spacing-fix */
+  @media (max-width:600px){
+    .sec{padding-block:52px 0;}
+    .cta-band{padding:36px 22px; margin-block:48px !important; border-radius:var(--r);}
+    .quote-band{padding:36px 22px;}
+    footer{margin-top:48px !important;}
+    .stat-strip{margin-top:40px !important;}
+    .split-banner{margin-block:40px !important;}
+  }
 </style>
 </head>
 <body>
@@ -177,6 +204,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-right">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="lang-switch">
         <a href="../index.html">FR</a>
         <a class="active" href="index.html">EN</a>
@@ -366,6 +394,21 @@
   </footer>
 </div>
 
+
+<script>
+(function(){
+  var t=document.getElementById('navToggle');
+  var n=document.querySelector('.navlinks');
+  if(!t||!n) return;
+  t.addEventListener('click', function(){
+    var open = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  n.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ n.classList.remove('open'); t.setAttribute('aria-expanded','false'); });
+  });
+})();
+</script>
 <a href="https://wa.me/212649526006" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 2 .95.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
 </a>
