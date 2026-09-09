@@ -153,7 +153,7 @@
       </div>
     </div>
 
-    <form id="form" onsubmit="return false;">
+    <form id="form">
       <span class="mono-label" style="display:block; margin-bottom:18px;">اطلب عرض سعر</span>
       <div class="two-col">
         <div class="field">
@@ -181,11 +181,31 @@
           </select>
         </div>
       </div>
+      <div class="two-col">
+        <div class="field">
+          <label for="f-scope">حجم المشروع</label>
+          <select id="f-scope" name="scope">
+            <option>عقار واحد / عرض واحد</option>
+            <option>عدة وحدات (دفعة، إقامة)</option>
+            <option>برنامج كامل / فندق</option>
+            <option>لست متأكدًا بعد</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-timeline">المدة المطلوبة</label>
+          <select id="f-timeline" name="timeline">
+            <option>عاجل (أقل من أسبوعين)</option>
+            <option>خلال شهر واحد</option>
+            <option>من شهرين إلى ثلاثة أشهر</option>
+            <option>بدون موعد نهائي محدد</option>
+          </select>
+        </div>
+      </div>
       <div class="field">
         <label for="f-message">مشروعك بإيجاز</label>
         <textarea id="f-message" name="message" placeholder="نوع العقار، المساحة، المدينة، المدة المطلوبة…"></textarea>
       </div>
-      <button type="submit" class="btn btn-fill">إرسال الطلب ←</button>
+      <button type="submit" class="btn btn-fill" data-idle="إرسال الطلب ←" data-sending="جارٍ الإرسال…" data-success="تم الإرسال ✓" data-error="خطأ — جرب واتساب">إرسال الطلب ←</button>
     </form>
   </div>
 
@@ -223,13 +243,65 @@
   });
 })();
 </script>
+<script>
+(function(){
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.sec-head, .service-row, .split-text, .stat, .trust-band, .quote-band, .cta-band, .about-grid > div');
+  if(!els.length) return;
+  els.forEach(function(el){ el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/REPLACE_ME@3dma.ma'; /* TODO: set real business email */
+  document.querySelectorAll('form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      if(!btn) return;
+      var idle = btn.getAttribute('data-idle') || btn.textContent;
+      var sending = btn.getAttribute('data-sending') || idle;
+      var success = btn.getAttribute('data-success') || idle;
+      var error = btn.getAttribute('data-error') || idle;
+      btn.textContent = sending;
+      btn.disabled = true;
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+        body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      }).then(function(){
+        form.reset();
+        btn.textContent = success;
+      }).catch(function(){
+        btn.textContent = error;
+      }).finally(function(){
+        setTimeout(function(){ btn.textContent = idle; btn.disabled = false; }, 5000);
+      });
+    });
+  });
+})();
+</script>
 <a href="https://wa.me/212649526006" target="_blank" rel="noopener" class="wa-float" aria-label="تواصل عبر واتساب">
   <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.1c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.12-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.81 2 .88 2.15.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 2 .95.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
 </a>
 <style>
   .wa-float{position:fixed; left:20px; bottom:20px; z-index:80; width:56px; height:56px; background:#25D366; border-radius:var(--r,2px); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,.28); transition:transform .2s;}
   .wa-float:hover{transform:scale(1.06);}
-  @media (max-width:800px){ .wa-float{width:50px; height:50px; left:14px; bottom:14px;} }
+    @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease;}
+    .reveal.in-view{opacity:1; transform:translateY(0);}
+  }
+@media (max-width:800px){ .wa-float{width:50px; height:50px; left:14px; bottom:14px;} }
 </style>
 </body>
 </html>
